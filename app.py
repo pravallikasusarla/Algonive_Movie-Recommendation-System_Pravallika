@@ -6,8 +6,8 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import linear_kernel
 
 # Load data
-movies = pd.read_csv("moviedata/movies.csv")
-ratings = pd.read_csv("moviedata/ratings.csv")
+movies = pd.read_csv("movies.csv")
+ratings = pd.read_csv("ratings.csv")
 
 movies['genres_clean'] = movies['genres'].fillna('').apply(lambda s: s.replace('|', ' '))
 movies['content'] = movies['title'].fillna('') + ' ' + movies['genres_clean']
@@ -41,11 +41,6 @@ if st.button("Recommend"):
             st.write(f"🎥 **{row.title}** — *{row.genres}*")
     else:
         st.warning("Movie not found. Please try another one.")
-# ============================
-# 🎬 MOVIE RECOMMENDATION SYSTEM
-# Content-Based + User-Based
-# ============================
-
 #Import Libraries 
 import streamlit as st
 import pandas as pd
@@ -54,8 +49,8 @@ from sklearn.metrics.pairwise import linear_kernel, cosine_similarity
 import numpy as np
 
 #Load Dataset
-movies = pd.read_csv("moviedata/movies.csv")
-ratings = pd.read_csv("moviedata/ratings.csv")
+movies = pd.read_csv("movies.csv")
+ratings = pd.read_csv("ratings.csv")
 
 # Clean and prepare movie content
 movies['genres_clean'] = movies['genres'].fillna('').apply(lambda s: s.replace('|', ' '))
@@ -125,13 +120,11 @@ st.title("🎬 Movie Recommendation System")
 # Tabs for different recommendation types
 tab1, tab2 = st.tabs(["🎥 Content-Based", "👥 User-Based"])
 
-# ---- TAB 1: Content-Based ----
+#  Content-Based 
 with tab1:
     st.header("🎥 Content-Based Recommendations")
     movie_list = movies['title'].values
-    # 👇 Add a unique key here
     selected_movie = st.selectbox("Select a movie:", movie_list, key="content_movie_select")
-
     if st.button("Recommend Similar Movies", key="content_button"):
         results = recommend_movie(selected_movie, topn=10)
         if results is not None:
@@ -139,7 +132,7 @@ with tab1:
         else:
             st.warning("Movie not found. Try another title.")
 
-# ---- TAB 2: User-Based ----
+#  User-Based 
 with tab2:
     st.header("👥 User-Based Recommendations")
     # 👇 Add unique keys here too
