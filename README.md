@@ -1,2 +1,2 @@
 # Algonive_Movie-Recommendation-System_Pravallika
-A Streamlit-based Movie Recommendation System built during the Algonive Machine Learning Internship.
+A machine learning–based Movie Recommendation System that suggests films using both content-based filtering and user-based collaborative filtering. The project analyzes movie genres, titles, and user preferences to deliver personalized movie suggestions. Built with Python, Scikit-learn, and Streamlit as part of the Algonive Machine Learning Internship.
