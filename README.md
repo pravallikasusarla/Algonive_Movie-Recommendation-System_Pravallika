@@ -1,15 +1,13 @@
 # Algonive_Movie-Recommendation-System_Pravallika
 
-Movie Recommendation System
-
-Project Overview
+**Project Overview**
 
 This project develops a Movie Recommendation System that suggests movies based on user preferences and movie similarities.
 It uses Content-Based Filtering and User-Based Collaborative Filtering to provide personalized recommendations.
 The system is built using machine learning techniques and deployed as an interactive web application using Streamlit.
 
 
-Objectives
+**Objectives**
 
 Analyze and preprocess movie and user rating datasets
 
@@ -22,7 +20,7 @@ Build a unified recommendation engine for both approaches
 Create a Streamlit interface for interactive movie suggestions
 
 
-Tools and Technologies Used
+**Tools and Technologies Used**
 
 Python
 Pandas
@@ -31,7 +29,7 @@ Scikit-learn
 Streamlit
 
 
-Key Insights
+**Key Insights**
 
 The system effectively identifies movies with similar genres and content.
 
@@ -42,7 +40,7 @@ Combining content-based and collaborative methods improves accuracy.
 The interface provides a simple and interactive way for users to explore movies.
 
 
-Future Improvements
+**Future Improvements**
 
 Add sentiment analysis of user reviews to refine recommendation accuracy
 
@@ -53,17 +51,17 @@ Integrate real-time APIs such as TMDb for updated movie information
 Implement user login and preference tracking for better personalization
 
 
-Dataset
+**Dataset**
 
 Dataset used: https://www.kaggle.com/datasets/ayushimishra2809/movielens-dataset
 This dataset includes movie titles, genres, and user rating data.
 
 
-How to Run Locally
+**How to Run Locally**
 
 1. Clone this repository:
 
-git clone https://github.com/yourusername/movie-recommendation-system.git
+git clone https://github.com/pravallikasusarla/movie-recommendation-system.git
 cd movie-recommendation-system
 
 
